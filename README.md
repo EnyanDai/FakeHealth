@@ -10,13 +10,14 @@ Our repository consist of two datasets: HealthStory and HealthRelease. Due to th
 * [Developer APP](https://developer.twitter.com/en/docs/basics/apps/overview) of twitter to generate `app_key`,`app_secret`,`oauth_token` and `oauth_token_secret`
 
 ## Running Code
-1. set the .\API\resources\tweet_keys_file.txt in the format of: <br> 
-app_key,app_secret,oauth_token,oauth_token_secret<br>
-XXXXXX,XXXXXXX,XXXXXXXXX,XXXXXXXXXXXXX
-2. Build HealthStory:
+1. set the `.\API\resources\tweet_keys_file.txt` in the format of:
+
+       app_key,app_secret,oauth_token,oauth_token_secret<br>
+       XXXXXX,XXXXXXX,XXXXXXXXX,XXXXXXXXXXXXX
+1. Build HealthStory:
    
        python main.py news_type=HealthStory sav_dir=../dataset
-3. Build HealthRelease:
+2. Build HealthRelease:
    
        python main.py news_type=HealthRelease sav_dir=../dataset
 ## Data Format
