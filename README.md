@@ -14,7 +14,7 @@ Our repository consist of two datasets: HealthStory and HealthRelease. Due to th
 ## Running Code
 1. set the `.\API\resources\tweet_keys_file.txt` in the format of:
 
-       app_key,app_secret,oauth_token,oauth_token_secret<br>
+       app_key,app_secret,oauth_token,oauth_token_secret
        XXXXXX,XXXXXXX,XXXXXXXXX,XXXXXXXXXXXXX
 2. Build HealthStory:
    
@@ -24,7 +24,7 @@ Our repository consist of two datasets: HealthStory and HealthRelease. Due to th
        python main.py news_type=HealthRelease sav_dir=../dataset
 
 4. Build user network: <br>
-   1. Download the `dataset/user_network/followers` and `dataset/user_network/followering` from `https://zenodo.org/record/3606757`.
+   1. Download the `dataset/user_network/followers` and `dataset/user_network/followering` from `https://zenodo.org/record/3606756`.
    2. (optional) Collect the followers and followerings profiles and save it into `dataset/user_network/user_profiles`:
       
           python crawl_friends_profiles.py sav_dir=../dataset
