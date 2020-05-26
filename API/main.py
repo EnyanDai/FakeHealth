@@ -36,7 +36,7 @@ for news_id, engage in engagements.items():
     print("===============get retweets===============")
 
     tweet_collector.get_retweets()
-
+    break
 # %%
 from news import News
 from collect_users import UserCollector
@@ -55,9 +55,18 @@ for news_id in engagements.keys():
     print("===============get user timelines=================")
 
     user_collector.collect_user_recent_tweets(news.get_all_users())
+
+    '''
+    # This has aleady provided in the zodeto link, please download the dataset 
     print("===============get user followers=================")
 
     user_collector.collect_user_followers(news.get_all_users())
 
     print("===============get user followings=================")
     user_collector.collect_user_followings(news.get_all_users())
+    '''
+    break
+
+user_collector.collect_user_follower_profiles()
+user_collector.collect_user_following_profiles()
+# %%

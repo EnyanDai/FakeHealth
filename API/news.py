@@ -35,10 +35,10 @@ class News:
         user_screen_name_set = set()
         for tweet_object in tweets:
             if("user" in tweet_object):
-                user_screen_name_set.add(tweet_object["user"]["screen_name"])
+                user_screen_name_set.add(tweet_object["user"]["id"])
             if(add_user_mentioned and "user_mentions" in tweet_object):
                 for user_mention in tweet_object["user_mentions"]:
-                    user_screen_name_set.add(user_mention["screen_name"])
+                    user_screen_name_set.add(user_mention["id"])
         return user_screen_name_set
         
     def get_json(self,tweet_type):
