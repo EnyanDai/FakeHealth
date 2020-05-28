@@ -116,7 +116,6 @@ class UserCollector:
                 self.collect_user_profiles(ids)
             if i + 1 % 100 == 0:
                 print("{} users' followers profiles has been collected".format(i + 1))
-                break
 
     def collect_user_following_profiles(self,following_dir=None):
         if following_dir==None:
@@ -130,7 +129,6 @@ class UserCollector:
                 self.collect_user_profiles(ids)
             if i + 1 % 100 == 0:
                 print("{} users' followers profiles has been collected".format(i + 1))
-                break
 
     def collect_user_followings(self,users):
         create_dir(self.user_following_dir)
@@ -153,23 +151,5 @@ class UserCollector:
                 print("other execption")
             if(i%15==0):
                 print("{}/{} following are attained".format(i,len(new_users_set)))
-#%%
-# import json
-# from collect_tweets import TweetCollector
-
-# config = json.load(open("config.json"))
-# connector = TwythonConnector(config["tweet_keys_file"])
-# news_type = config["data_collection_choice"][0]
-# with open(news_type,"r",encoding="utf-8") as f:
-#     articles = json.load(f)
-# user_collector = UserCollector(config["dump_location"],connector)
-# # users = set()
-# # for i,article in enumerate(articles[0:1700]):
-# #     tweet_collector = TweetCollector(config["dump_location"], news_type,article,connector)
-# #     user_id_set = tweet_collector.get_own_user_id()
-# #     users.update(user_id_set)
-# # print("{} users founded".format(len(users)))
-# # user_collector.collect_user_profiles(users)
-# user_collector.collect_user_followers()
 
 # %%
